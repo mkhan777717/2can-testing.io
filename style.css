@@ -721,6 +721,9 @@ hr {
     transition: all 0.3s ease;
 }
 
+.rightItemsNav a.active {
+        color: #FEDD04; 
+    }
 
 /* --------------------------------------------------- */
 /* media queries */
