@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+   <nav class="navPad">
+        <img class="logo" src="./assets/logo-new.png" alt="logo" />
+
+        <div class="rightItemsNav" id="navMenu">
+            <a href="/">Home</a>
+            <a href="./work.html" class="active">What we did?</a>
+            <a href="./about.html">Who are we?</a>
+            <a href="https://wa.me/message/I446ELKXA7UUF1" target="_blank" title="Chat on Whatsapp" class="whereWeAreBtn">Where are we?</a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- filter section -->
+    <div class="divPadWrapper">
+        <p class="titleBig">What We <span style="color: #FEDD04;">Did?</span></p>
+        <br>
+
+
+        <!-- FILTER DROPDOWN -->
+        <div class="dropdown" id="dropdown">
+            <span class="filterBtn">Filter &nbsp;<img src="./assets/Vector.png" /></span>
+            <div class="dropdown-content" id="dropdownContent">
+                <!-- Common Filter List -->
+                <label><input type="checkbox" value="Branding: Strategy & Positioning"> Branding: Strategy &
+                    Positioning</label>
+                <label><input type="checkbox" value="Voice & Narrative Systems"> Voice & Narrative Systems</label>
+                <label><input type="checkbox" value="Visual Identity Designs"> Visual Identity Designs</label>
+                <label><input type="checkbox" value="Archetype & Culture Mapping"> Archetype & Culture Mapping</label>
+
+                <label><input type="checkbox" value="Campaign Concepts & Content Strategy"> Campaign Concepts & Content
+                    Strategy</label>
+                <label><input type="checkbox" value="Social Content Systems"> Social Content Systems</label>
+                <label><input type="checkbox" value="Founder-Led & Creator-Led Playbooks"> Founder-Led & Creator-Led
+                    Playbooks</label>
+                <label><input type="checkbox" value="Platform-Native Storytelling"> Platform-Native Storytelling</label>
+                <label><input type="checkbox" value="AI Driven Content Creation"> AI Driven Content Creation</label>
+                <label><input type="checkbox" value="Content Production ( Photo / Video )"> Content Production ( Photo /
+                    Video )</label>
+
+                <label><input type="checkbox" value="Go-To-Market Strategy"> Go-To-Market Strategy</label>
+                <label><input type="checkbox" value="Pop-Ups, Event IPs & Activations"> Pop-Ups, Event IPs &
+                    Activations</label>
+                <label><input type="checkbox" value="Influencer & Community Marketing"> Influencer & Community
+                    Marketing</label>
+                <label><input type="checkbox" value="Whatsapp Marketing, CRM Support, Chatbots"> Whatsapp Marketing, CRM
+                    Support, Chatbots</label>
+                <label><input type="checkbox" value="Media Buying ( Digital Marketing, Social, Community )"> Media
+                    Buying ( Digital Marketing, Social, Community )</label>
+            </div>
+        </div>
+
+        <!-- Selected Filters -->
+        <div class="selected-items" id="selectedItems"></div>
+
+        <!-- <p class="workTitle">
+            Resham Ke Dhaage
+        </p>
+        <br>
+
+        <div class="workContentWrapper">
+            <div>
+                <p class="workSubTitle">
+                    Brand Strategy & Identity
+                </p>
+                <p class="workDescText">
+                    Developed luxury heritage fashion brand positioning for Australian market, balancing cultural
+                    authenticity with contemporary appeal through sophisticated brand voice and premium positioning.
+                </p>
+            </div>
+
+            <div>
+                <p class="workSubTitle">
+                    Brand Book Creation
+                </p>
+                <p class="workDescText">
+                    Designed comprehensive brand guidelines including visual identity, messaging framework, and
+                    cultural sensitivity protocols with complete documentation for consistent brand expression.
+                </p>
+            </div>
+
+            <div>
+                <p class="workSubTitle">
+                    Product Storytelling
+                </p>
+                <p class="workDescText">
+                    Crafted 10+ product descriptions across heritage collections, transforming cultural narratives into
+                    accessible luxury stories highlighting premium craftsmanship and digital artistry.
+                </p>
+            </div>
+
+            <div>
+                <p class="workSubTitle">
+                    Content & Social Strategy
+                </p>
+                <p class="workDescText">
+                    Created 50+ social media captions, ad copies, and educational content with
+                    Australia-specific messaging, SEO optimization, and heritage storytelling framework.
+                </p>
+            </div>
+
+            <div>
+                <p class="workSubTitle">
+                    Collection Development
+                </p>
+                <p class="workDescText">
+                    Established distinct identities for heritage-inspired collections with sophisticated
+                    naming conventions honoring traditional art forms while appealing to modern consumers.
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <center>
+            <img src="/assets/workImg.png" alt="work image" />
+        </center> -->
+
+    </div>
+    <br>
+
+    <!-- old format -->
+    <!-- <div class="divPad">
+        <p class="workTitle">
+            Resham Ke Dhaage
+        </p>
+        <br>
+
+        <div class="workContentWrapper">
+            <div>
+                <p class="workSubTitle">
+                    Brand Strategy & Identity
+                </p>
+                <p class="workDescText">
+                    Developed luxury heritage fashion brand positioning for Australian market, balancing cultural
+                    authenticity with contemporary appeal through sophisticated brand voice and premium positioning.
+                </p>
+            </div>
+
+            <div>
+                <p class="workSubTitle">
+                    Brand Book Creation
+                </p>
+                <p class="workDescText">
+                    Designed comprehensive brand guidelines including visual identity, messaging framework, and
+                    cultural sensitivity protocols with complete documentation for consistent brand expression.
+                </p>
+            </div>
+
+            <div>
+                <p class="workSubTitle">
+                    Product Storytelling
+                </p>
+                <p class="workDescText">
+                    Crafted 10+ product descriptions across heritage collections, transforming cultural narratives into
+                    accessible luxury stories highlighting premium craftsmanship and digital artistry.
+                </p>
+            </div>
+
+            <div>
+                <p class="workSubTitle">
+                    Content & Social Strategy
+                </p>
+                <p class="workDescText">
+                    Created 50+ social media captions, ad copies, and educational content with
+                    Australia-specific messaging, SEO optimization, and heritage storytelling framework.
+                </p>
+            </div>
+
+            <div>
+                <p class="workSubTitle">
+                    Collection Development
+                </p>
+                <p class="workDescText">
+                    Established distinct identities for heritage-inspired collections with sophisticated
+                    naming conventions honoring traditional art forms while appealing to modern consumers.
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <center>
+            <img src="/assets/workImg.png" alt="work image" />
+        </center>
+    </div> -->
+
+    <!-- new format -->
+    <div class="divPad" id="div1">
+        <p class="workTitle">
+            Resham Ke Dhage: Crafting Culture for a Global Runway
+        </p>
+        <br>
+        <p class="workDescText">
+            When Mohena dreamt of blending Indian heritage with Australian luxury, we stepped in to bring that vision to
+            life end to end. From brand strategy that celebrated India’s art forms to creating a visual identity, e
+            commerce website, collection names, and cohesive storytelling, every detail was rooted in authenticity and
+            elegance. We led production for product and lifestyle shoots, shaped social media narratives, and delivered
+            over 60 plus content pieces all in just 3 months. The result? A modern luxury brand that wears its roots
+            with pride, and speaks to global audiences with a voice that’s both timeless and true.
+        </p>
+        <br>
+        <!-- gallery -->
+        <div style="padding: 1em;">
+            <img src="./assets/RKD/2.jpeg" alt="" class="rkd-img-2" />
+        </div>
+        <div class="rkd-gallery-wrapper">
+            <div>
+                <img src="./assets/RKD/1.jpg" alt="" class="rkd-img-1" />
+            </div>
+            <div>
+                <img src="./assets/RKD/3.jpg" class="rkd-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/RKD/4.jpg" class="rkd-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/RKD/5.jpg" class="rkd-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/RKD/6.jpg" class="rkd-img-1" alt="" />
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="divPad" id="div2">
+        <p class="workTitle">
+            PVR Cinemas x F1 Movie Launch Event:
+        </p>
+        <br>
+        <p class="workDescText">
+            To transform PVR’s underused courtyards into Gen Z magnets and fuel excitement for the upcoming F1 movie, we
+            built “Beyond the Tracks”, a full day fan festival that blended racing culture with music, gaming, and live
+            experiences. Built for Gen Z, the day long activation featured racing simulators, gaming zones, film
+            screenings, live music, and creator led moments. Every touchpoint was crafted to build buzz for the F1
+            movie, powered by sponsor tie-ins and GTM insights. The result? 3,500+ attendees across 3 days, 3.2M+ online
+            impressions, and got Red Bull on board. A bold, cash positive brand moment that positioned PVR as more than
+            just a cinema but an experience destination.
+        </p>
+        <br>
+        <!-- gallery -->
+        <div class="rkd-gallery-wrapper">
+            <div>
+                <img src="./assets/pvr/1.jpeg" alt="" class="pvr-img-1" />
+            </div>
+            <div>
+                <img src="./assets/pvr/3.jpeg" class="pvr-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/pvr/2.jpeg" class="pvr-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/pvr/5.jpg" class="pvr-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/pvr/6.png" class="pvr-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/pvr/4.jpg" alt="" class="pvr-img-1" />
+            </div>
+            <div>
+                <img src="./assets/pvr/7.jpg" class="pvr-img-1" alt="" /><br><br>
+            </div>
+            <div>
+                <img src="./assets/pvr/8.png" class="pvr-img-1" alt="" />
+            </div>
+
+        </div>
+    </div>
+
+    <div class="divPad" id="div3">
+        <p class="workTitle">
+            College Rivals - India’s Largest College Gaming IP
+        </p>
+        <br>
+        <p class="workDescText">
+            College Rivals wasn’t just another esports tournament, it was a culture movement in the making. 2CAN helped
+            shape it end to end: from building the “Join the Rivalry” identity to scaling a nationwide community across
+            70 plus colleges. We drove everything from content and campus activations to CRM, influencer marketing, and
+            brand partnerships with Red Bull, Sony PlayStation, and more. With 50k plus players, 10M plus impressions,
+            and unforgettable on ground energy, we turned College Rivals into India’s biggest college gaming IP: where
+            Gen Z didn’t just play, they belonged.
+        </p>
+        <br>
+        <!-- gallery -->
+        <div class="college-rival-gallery-wrapper">
+
+            <iframe src="https://www.instagram.com/reel/DNDVzw0ySXc/embed" allowtransparency="true"
+                allowfullscreen="true"></iframe>
+
+            <iframe src="https://www.instagram.com/reel/DAgKfwZyYZe/embed" allowtransparency="true"
+                allowfullscreen="true"></iframe>
+
+            <iframe src="https://www.instagram.com/reel/CwFTbFABd6G/embed" allowtransparency="true"
+                allowfullscreen="true"></iframe>
+
+            <iframe src="https://www.instagram.com/reel/C_DOdVhy3Ub/embed" allowtransparency="true"
+                allowfullscreen="true"></iframe>
+
+            <iframe src="https://www.instagram.com/reel/DEZhUO4SwRz/embed" allowtransparency="true"
+                allowfullscreen="true"></iframe>
+
+            <iframe src="https://www.instagram.com/reel/DD9tuZWSZzX/embed" allowtransparency="true"
+                allowfullscreen="true"></iframe>
+
+            <iframe src="https://www.instagram.com/reel/DCy8h2RyENK/embed" allowtransparency="true"
+                allowfullscreen="true"></iframe>
+
+            <iframe src="https://www.instagram.com/reel/C_NgmY2SeQu/embed" allowtransparency="true"
+                allowfullscreen="true"></iframe>
+
+        </div>
+    </div>
+
+    <div class="divPad" id="div4">
+        <p class="workTitle">
+            BEYOND: Curating Fandom Live Experience
+        </p>
+        <br>
+        <p class="workDescText">
+            We partnered with BEYOND to shape it into a Gen Z first entertainment collective, rooted in fandoms, youth
+            culture, and original IPs. From strategy to execution, we built the GTM roadmap, developed flagship
+            experiences like BEYOND PLAY and BEYOND DRIP, and led content systems that delivered 200 plus pieces across
+            7 campaigns. We crafted its brand identity, launched the website, and activated events that felt like
+            festivals, not formulas. In just 90 days, BEYOND scaled its community to 3,000 plus members, unlocked ₹25L
+            plus in brand partnerships, and positioned itself as a breakout voice in India’s culture and event scene.
+        </p>
+        <br>
+        <!-- gallery -->
+        <div class="beyond-gallery-wrapper">
+            <div>
+                <img src="./assets/beyond/3.jpg" class="beyond-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/beyond/4.jpg" class="beyond-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/beyond/11.png" class="beyond-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/beyond/5.png" class="beyond-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/beyond/6.png" class="beyond-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/beyond/7.png" class="beyond-img-1" alt="" /><br>
+                <img src="./assets/beyond/12.jpg" alt="" class="beyond-img-1" />
+            </div>
+            <div>
+                <img src="./assets/beyond/8.png" class="beyond-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/beyond/9.png" class="beyond-img-1" alt="" /><br><br>
+                <img src="./assets/beyond/10.jpg" class="beyond-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/beyond/1.jpg" alt="" class="beyond-img-1" />
+            </div>
+        </div>
+    </div>
+
+    <div class="divPad" id="div5">
+        <p class="workTitle">
+            FableStreet: Making Fit Accessible to All
+        </p>
+        <br>
+        <p class="workDescText">
+            FableStreet needed a way to explain their FS Fits Algorithm and why Indian sizing needed a rethink. We
+            built
+            a storytelling led content engine that made technical sizing feel deeply personal. From viral POV Reels
+            on
+            fit struggles to platform native launch campaigns, we turned body diversity into a brand superpower. We
+            crafted punchy ad copy, tapped into trends with smart overlays, and executed education meets emotion
+            across
+            channels. The result? 40 Millions of views, sharper recall, stronger community love with 1M plus New
+            Members, and real movement in conversions, positioning FableStreet as the go to for Indian women who
+            want
+            fit without compromise.
+        </p>
+        <br>
+        <!-- gallery -->
+        <div class="beyond-gallery-wrapper">
+            <div>
+                <img src="./assets/fable/1.jpg" class="fable-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/fable/2.jpg" class="fable-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/fable/3.jpg" class="fable-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/fable/4.jpg" class="fable-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/fable/5.jpg" class="fable-img-1" alt="" />
+            </div>
+            <div>
+                <img src="./assets/fable/6.jpg" class="fable-img-1" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="divPad" id="div7">
+        <p class="workTitle">
+            IndiaClan: Demystifying Finance with Content Growth Engine
+        </p>
+        <br>
+        <p class="workDescText">
+            When Indiaclan, a next gen financial education and trading platform, wanted to demystify markets and
+            drive
+            app adoption without burning marketing budgets, 2CAN stepped in with a content led growth engine. We
+            turned
+            complex topics like IPOs, options, crypto, and trading into snackable, relatable stories; built a studio
+            for
+            daily financial content; scripted and produced viral ads and explainer series; moderated live sessions
+            with
+            SEBI registered experts; and tracked performance across every channel. The result: 50,000 plus downloads
+            in
+            three months at ₹7 CPD (vs. ₹24-28 industry average) and Indiaclan emerging as a credible, engaging
+            destination for simplified finance.
+        </p>
+        <br>
+        <!-- gallery -->
+    </div>
+
+    <div class="divPad" id="div8">
+        <p class="workTitle">
+            College Rivals Youth Culture Festival @ NESCO
+        </p>
+        <br>
+        <p class="workDescText">
+            When Indiaclan, a next gen financial education and trading platform, wanted to demystify markets and
+            drive
+            app adoption without burning marketing budgets, 2CAN stepped in with a content led growth engine. We
+            turned
+            complex topics like IPOs, options, crypto, and trading into snackable, relatable stories; built a studio
+            for
+            daily financial content; scripted and produced viral ads and explainer series; moderated live sessions
+            with
+            SEBI registered experts; and tracked performance across every channel. The result: 50,000 plus downloads
+            in
+            three months at ₹7 CPD (vs. ₹24-28 industry average) and Indiaclan emerging as a credible, engaging
+            destination for simplified finance.
+        </p>
+        <br>
+        <!-- gallery -->
+        <div class="college-rival-gallery-wrapper">
+            <iframe src="https://www.instagram.com/reel/DGdZS4mtL8V/embed" allowfullscreen allowtransparency></iframe>
+            <iframe src="https://www.instagram.com/reel/DGiGH97PYNk/embed" allowfullscreen allowtransparency></iframe>
+            <iframe src="https://www.instagram.com/reel/DGp6mZlSlc0/embed" allowfullscreen allowtransparency></iframe>
+            <iframe src="https://www.instagram.com/reel/DGu3ls3tjB2/embed" allowfullscreen allowtransparency></iframe>
+            <iframe src="https://www.instagram.com/reel/C5s2x2wvnlB/embed" allowfullscreen allowtransparency></iframe>
+            <iframe src="https://www.instagram.com/reel/C55rt7Ht-k3/embed" allowfullscreen allowtransparency></iframe>
+            <iframe src="https://www.instagram.com/reel/C6JUGBotBT6/embed" allowfullscreen allowtransparency></iframe>
+            <iframe src="https://www.instagram.com/reel/DG5oDItyLCP/embed" allowfullscreen allowtransparency></iframe>
+            <iframe src="https://www.instagram.com/reel/DGgAcVpNeJf/embed" allowfullscreen allowtransparency></iframe>
+            <iframe src="https://www.instagram.com/reel/DGC9Pj-N6n1/embed" allowfullscreen allowtransparency></iframe>
+        </div>
+
+    </div>
+
+    <!-- our process -->
+    <div class="wordCardWrapper">
+        <div class="workCard">
+            <div>
+                <p class="workCardTitle">Our Process is as Human as Our Work</p>
+            </div>
+            <div>
+                <p class="workCardSubTitle">We start with coffee (or tea), dive deep into your story, create with
+                    our hands as much as our computers, and never stop until it feels right in your soul.</p>
+            </div>
+            <div class="circleWrapper">
+                <div style="flex-grow: 1;">
+                    <span class="circleBlack">1</span> <span class="workCardNumberText">Listen</span>
+                </div>
+                <div style="flex-grow: 1;">
+                    <span class="circleBlack">2</span> <span class="workCardNumberText">Create</span>
+                </div>
+                <div style="flex-grow: 1;">
+                    <span class="circleBlack">3</span> <span class="workCardNumberText">Discover</span>
+                </div>
+                <div style="flex-grow: 1;">
+                    <span class="circleBlack">4</span> <span class="workCardNumberText">Refine</span>
+                </div>
+            </div>
+        </div>
+        <div class="redCircle">
+            <p class="redCirleText">
+                Looking for <br>thoughtful work <br>that moves people? Let’s <br>build it together
+            </p>
+        </div>
+    </div>
+
+    <div class="contacNowBottomWrapperForWork">
+        <p class="subTitle">Ready to create something that matters?</p>
+        <br>
+
+        <div class="contactBtnDiv">
+            <button class="contactBtnYellow">Contact Now</button>
+        </div>
+    </div>
+    <br>
+
+    <div class="whatsappIcon">
+        <a href="https://wa.me/message/I446ELKXA7UUF1" target="_blank" title="Chat on Whatsapp">
+            <img src="./assets/64px-WhatsApp_icon.png" alt="whatsapp-icon" />
+        </a>
+    </div>
+
+    <footer class="footerBg">
+        <div class="footerWrapper">
+            <div class="footCol">
+                <img src="./assets/logo-new.png" alt="logo" width="200" />
+                <p>Build Brands with soul, story & a splash of rebellion.</p>
+            </div>
+            <div class="quickLinks">
+                <h3>Quick Links</h3>
+                <a href="/">Home</a>
+                <a href="/work.html" style="color: #FEDD04;">What we did?</a>
+                <a href="/about.html">Who are we?</a>
+                <a href="https://wa.me/message/I446ELKXA7UUF1" target="_blank" title="Chat on Whatsapp">Where are we?</a>
+            </div>
+
+            <div class="quickLinks">
+                <h3>Let's Connect</h3>
+                <div>
+                    <span style="color: #FEDD04;">Email:</span> hello@2cancreations.com
+                </div>
+                <div>
+                    <span style="color: #FEDD04;">Phone:</span> +91921147707
+                </div>
+            </div>
+        </div>
+
+        <center>
+            <hr>
+            <div class="bottomFooterWrapper">
+                <p>© 2025 2CAN Creations. All rights reserved. No templates were harmed in the making of this site.</p>
+                <br>
+                <button class="footerBtn">Emotional, not automated</button>
+            </div>
+        </center>
+
+    </footer>
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
