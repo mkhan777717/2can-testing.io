@@ -118,7 +118,7 @@ a:hover {
     background: linear-gradient(#050502, #426E82);
     padding: 2em 3em;
     width: 20%;
-    height: 28em;
+    min-height: 28em;
 }
 
 .cardTitle {
@@ -161,7 +161,7 @@ a:hover {
     border: 2px solid #606060;
     border-radius: 1em;
     width: 25%;
-    height: 36em;
+    min-height: 33em;
 }
 
 .imgCardWrapper {
@@ -201,7 +201,6 @@ a:hover {
     flex-direction: column;
     gap: 1.5em;
     padding: 1em;
-    height: 28em;
     font-weight: 400;
     flex-wrap: wrap;
 }
@@ -214,6 +213,7 @@ a:hover {
     border-radius: 1em;
     padding: 0.2em 1em;
     font-weight: 500;
+    margin-top: 1em;
 }
 
 .caseStudy {
@@ -725,13 +725,19 @@ hr {
         color: #FEDD04; 
     }
 
+
+.heartImg{
+    width: 50px;
+    height: 40px;
+}
+
 /* --------------------------------------------------- */
 /* media queries */
 
 @media (max-width: 1024px) {
     .card {
         width: 30vw;
-        height: 20em;
+        min-height: 25em;
     }
 
     .listText {
@@ -749,7 +755,7 @@ hr {
 
     .card2 {
         width: 27vw;
-        height: 31em;
+        min-height: 31em;
     }
 }
 
@@ -764,13 +770,13 @@ hr {
 
     .card {
         width: 30vw;
-        height: 27em;
+        min-height: 27em;
         padding: 2em;
     }
 
     .card2 {
         width: 40vw;
-        height: 32em;
+        min-height: 32em;
     }
 
     .listText {
@@ -852,9 +858,87 @@ hr {
     }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 668px) {
+    .workCard{
+        margin-bottom: 0;
+    }
+    .redCircle {
+        bottom: -24vh;
+        height: 10em;
+        width: 10em;
+    }
+
+    .workCardNumberText {
+        font-size: 14px;
+        display: inline-block;
+        margin-top: 1em;
+    }
+
+    .redCirleText {
+        font-size: 1em;
+    }
+
+    .footerBtn {
+        font-size: 1em;
+    }
+
+    .footerWrapper {
+        flex-direction: column;
+    }
+
+    .footCol {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 680px) {
+    .card {
+        width: 60%;
+        min-height: 21em;
+        padding: 2em;
+    }
+}
+
+@media (max-width: 520px) {
+    .heartImg{
+        width: 35px;
+        height: 30px;
+    }
+
+    .ourWorkBtn{
+        font-size: 14px;
+        padding: 0.2em 0.5em;
+    }
+
+    .caseStudy{
+        font-size: 14px;
+    }
+    
+    .card {
+        width: 80%;
+        min-height: 16em;
+        padding-left: 2em;
+        padding-top: 2em;
+        padding-right: 1em;
+        padding-bottom: 2em;
+    }
+
+    .card2 {
+        width: 100%;
+        min-height: 38em;
+    }
+
+    .cardTitle{
+        font-size: 20px;
+    }
+
+    .listText {
+        font-size: 14px;
+    }
+
     .titleBig {
-        font-size: 2.5em;
+        font-size: 1.5em;
         padding: 0px;
     }
 
@@ -862,19 +946,20 @@ hr {
         padding: 2em;
     }
 
+    .contacNowBottomWrapper{
+        margin-top: 0px;
+    }
+
+    .contactBtnYellow{
+        font-size: 1em;
+    }
+
     .subTitle {
-        font-size: 1.3em;
+        font-size: 1em;
     }
 
-    .card {
-        width: 100%;
-        height: 22em;
-        padding: 2em;
-    }
-
-    .card2 {
-        width: 100%;
-        height: 34em;
+    .contactBtn{
+        font-size: 1em;
     }
 
     .contacNowBottomWrapper {
@@ -885,12 +970,12 @@ hr {
         margin-top: 10em;
     }
 
-    .footerWrapper {
-        flex-direction: column;
+    .workTitle{
+        font-size: 24px;
     }
 
-    .footCol {
-        width: 100%;
+    .workDescText{
+        font-size: 1em;
     }
 
     .workCard {
@@ -905,29 +990,11 @@ hr {
     }
 
     .workCardTitle {
-        font-size: 2em;
+        font-size: 1.5em;
         line-height: 1em;
     }
 
     .workCardSubTitle {
-        font-size: 1.5em;
-    }
-
-    .redCircle {
-        bottom: -24vh;
-        height: 10em;
-        width: 10em;
-    }
-
-    .workCardNumberText {
-        font-size: 1em;
-    }
-
-    .redCirleText {
-        font-size: 1em;
-    }
-
-    .footerBtn {
         font-size: 1em;
     }
 
@@ -936,7 +1003,7 @@ hr {
     }
 
     .aboutSubTitle {
-        font-size: 1.5em;
+        font-size: 1em;
         text-align: center;
     }
 
@@ -954,5 +1021,34 @@ hr {
 
     .cardAbout {
         padding: 1em;
+    }
+
+    .card2{
+       min-height: 23em;
+    }
+
+    .tag{
+        padding: 0.5em;
+        font-size: 10px;
+    }
+
+    .divPadWrapper{
+        padding-bottom: 0;
+    }
+}
+
+
+
+@media (max-width: 425px) {
+    .card{
+        min-height: 22em;
+    }
+
+    .cardTitle {
+        font-size: 1em;
+    }
+
+    .cardWrapper{
+        padding-top: 0;
     }
 }
