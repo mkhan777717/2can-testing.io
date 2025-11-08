@@ -183,7 +183,9 @@ a:hover {
 
 .imgCard {
     width: 100%;
+    max-height: 17em;
     border-radius: 1em;
+    object-fit: cover;
 }
 
 .ribbonTag {
@@ -435,7 +437,7 @@ hr {
     color: #F9575D;
     font-size: 2em;
     text-align: center;
-    padding: 0px 2em;
+    padding: 0px 8em;
 }
 
 .aboutSubTitle {
