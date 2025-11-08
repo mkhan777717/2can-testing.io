@@ -10,6 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
     if (div) divs[`div${i}`] = div;
   }
 
+  const params = new URLSearchParams(window.location.search);
+  const filter = params.get("filter");
+
+  const filters = [
+    "rkd",
+    "pvr",
+    "clgRival",
+    "beyond",
+    "fableStreet",
+    "indianClan",
+    "clgRivalNESCO"
+  ];
+
   // --- FILTER ARRAYS ---
   const divFilters = {
     div1: [
@@ -115,19 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- DROPDOWN LOGIC (runs only if dropdown exists) ---
   if (dropdown && dropdownContent && selectedItemsContainer) {
-    dropdown.addEventListener("click", (e) => {
-      if (e.target.tagName !== "INPUT") dropdownContent.classList.toggle("show");
-    });
-
-    dropdownContent.addEventListener("change", () => {
-      updateSelectedTags();
-      toggleDivs();
-    });
-
-    window.addEventListener("click", (e) => {
-      if (!dropdown.contains(e.target)) dropdownContent.classList.remove("show");
-    });
-
     function updateSelectedTags() {
       selectedItemsContainer.innerHTML = "";
       const selected = dropdownContent.querySelectorAll("input:checked");
@@ -146,18 +146,66 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function toggleDivs() {
-      const selectedValues = Array.from(dropdownContent.querySelectorAll("input:checked")).map(cb => cb.value);
+      const selectedValues = Array.from(
+        dropdownContent.querySelectorAll("input:checked")
+      ).map((cb) => cb.value);
 
-      Object.keys(divs).forEach(key => {
+      Object.keys(divs).forEach((key) => {
         const div = divs[key];
         const filters = divFilters[key] || [];
-        const show = selectedValues.some(val => filters.includes(val));
+        const show = selectedValues.some((val) => filters.includes(val));
         div.style.display = show ? "block" : "none";
       });
     }
+
+    // --- CLICK EVENTS ---
+    dropdown.addEventListener("click", (e) => {
+      if (!dropdownContent.contains(e.target)) {
+        dropdownContent.classList.toggle("show");
+      }
+    });
+
+    dropdownContent.addEventListener("change", () => {
+      updateSelectedTags();
+      toggleDivs();
+    });
+
+    window.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdownContent.classList.remove("show");
+      }
+    });
+
+    // --- APPLY FILTER FROM URL (if any) ---
+    if (filter && filters.includes(filter)) {
+      let divKey = "";
+
+      switch (filter) {
+        case "rkd": divKey = "div1"; break;
+        case "pvr": divKey = "div2"; break;
+        case "clgRival": divKey = "div3"; break;
+        case "beyond": divKey = "div4"; break;
+        case "fableStreet": divKey = "div5"; break;
+        case "indianClan": divKey = "div6"; break;
+        case "clgRivalNESCO": divKey = "div7"; break;
+      }
+
+      if (divKey && divFilters[divKey]) {
+        const checkboxes = dropdownContent.querySelectorAll("input[type='checkbox']");
+        checkboxes.forEach((cb) => (cb.checked = false));
+
+        divFilters[divKey].forEach((val) => {
+          const checkbox = Array.from(checkboxes).find((cb) => cb.value === val);
+          if (checkbox) checkbox.checked = true;
+        });
+
+        updateSelectedTags();
+        toggleDivs();
+      }
+    }
   }
 
-  // --- NAVBAR HAMBURGER LOGIC (runs only if present) ---
+  // --- NAVBAR HAMBURGER LOGIC ---
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.getElementById("navMenu");
 
@@ -167,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navMenu.classList.toggle("active");
     });
 
-    document.querySelectorAll(".rightItemsNav a").forEach(link => {
+    document.querySelectorAll(".rightItemsNav a").forEach((link) => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");

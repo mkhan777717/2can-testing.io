@@ -164,6 +164,19 @@ a:hover {
     min-height: 33em;
 }
 
+.card3 {
+    position: relative;
+    border: 2px solid #606060;
+    border-radius: 1em;
+    width: 25%;
+    font-size: 1.5em;
+}
+
+.redText{
+    color: #F9575D;
+    font-size: 16px;
+}
+
 .imgCardWrapper {
     position: relative;
 }
@@ -283,7 +296,7 @@ a:hover {
     color: #606060;
     border: none;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
@@ -504,11 +517,11 @@ hr {
 .dropdown {
     position: relative;
     display: inline-block;
-    width: 100%;
-    background: #111;
+    /* width: 100%;
+    background: #111; */
     color: white;
-    border: 1px solid #444;
-    border-radius: 8px;
+    /* border: 1px solid #444;
+    border-radius: 8px; */
     cursor: pointer;
     padding: 10px;
 }
@@ -523,6 +536,11 @@ hr {
     border-radius: 8px;
     max-height: 220px;
     overflow-y: auto;
+    width: 30vw;
+}
+
+.dropdown-content.show {
+  display: block;
 }
 
 .dropdown-content label {
@@ -535,6 +553,44 @@ hr {
 .dropdown-content label:hover {
     background-color: #222;
 }
+
+/* scrollbar styling */
+#dropdownContent {
+  scrollbar-width: none; /* reduces width */
+}
+
+/* Hide the default checkbox */
+#dropdownContent input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #f0f0f0;
+  border: 2px solid #888;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Checked state */
+#dropdownContent input[type="checkbox"]:checked {
+  background-color: #888;
+  /* border-color: #888; */
+}
+
+/* Checkmark (✓) */
+#dropdownContent input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  font-size: 13px;
+  left: 3px;
+  top: -2px;
+}
+
+
 
 .show {
     display: block;
@@ -731,6 +787,14 @@ hr {
     height: 40px;
 }
 
+.desktopTitle{
+        display: block;
+    }
+
+.mobileTitle{
+    display: none;
+}
+
 /* --------------------------------------------------- */
 /* media queries */
 
@@ -760,6 +824,14 @@ hr {
 }
 
 @media (max-width: 768px) {
+    .desktopTitle{
+        display: none;
+    }
+
+    .mobileTitle{
+        display: block;
+    }
+
     .rightItemsNav {
         display: none;
     }
@@ -917,7 +989,7 @@ hr {
     
     .card {
         width: 80%;
-        min-height: 16em;
+        min-height: 18em;
         padding-left: 2em;
         padding-top: 2em;
         padding-right: 1em;
