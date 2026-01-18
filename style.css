@@ -90,12 +90,32 @@ a:hover {
     padding: 0.5em 1.5em;
 }
 
-.marqStyle {
-    background-color: #FEDD04;
-    color: #000 !important;
-    font-weight: 500;
-    padding: 0.5em 0px;
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FEDD04;
+  white-space: nowrap;
 }
+
+.marquee-content {
+  padding: 0.5em 0;
+  display: flex;
+  width: max-content;
+  animation: scroll 15s linear infinite;
+}
+
+.marquee-content span {
+    padding: 0 50px; /* Space between items */
+    color: #000 !important;  
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* Reset halfway through the double-width container */
+}
+
 
 .cardWrapper {
     display: flex;
@@ -112,7 +132,7 @@ a:hover {
     background: linear-gradient(#050502, #426E82);
     padding: 2em 3em;
     width: 20%;
-    min-height: 28em;
+    min-height: 24em;
 }
 
 .cardTitle {
@@ -126,8 +146,19 @@ a:hover {
     gap: 1em;
 }
 
+.caseStudyWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 .listText {
     font-size: 1.1em;
+    min-height: 4em;
+}
+
+.listWrapper{
+    min-height: 13em;
 }
 
 .workBtnWrapper {
@@ -276,6 +307,10 @@ a:hover {
 .footerSection {
     display: flex;
     /* justify-content: ; */
+}
+
+.card2ContentWrapperTitle {
+    min-height: 5em;
 }
 
 /* work page */
@@ -489,12 +524,18 @@ hr {
 }
 
 .whereWeAreBtn {
-    color: white;
-    border: 2px solid white;
-    background: none;
+    color: black !important;
+    border: 2px solid black;
+    background: #ffcc00;
     border-radius: 1em;
     padding: 0.2em 1em;
     font-weight: 500;
+}
+
+.whereWeAreBtn:hover{
+    background-color: black !important;
+    color: #ffcc00 !important;
+    border: 2px solid #ffcc00;
 }
 
 .optionsStyle {
@@ -532,6 +573,7 @@ hr {
 }
 
 .dropdown-content label {
+    color: rgb(96, 96, 96);;
     display: flex;
     align-items: center;
     padding: 8px;
@@ -708,7 +750,6 @@ hr {
     right: 2em;
 }
 
-
 .college-rival-gallery-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -819,7 +860,7 @@ hr {
 /* Grid Layout */
 .media-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   padding: 20px;
   max-width: 1200px;
@@ -845,10 +886,9 @@ hr {
 
 /* Media Item Styles */
 .media-item {
-  position: relative;
-  overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 50%;
 }
 
 .pvr-parent {
@@ -1285,6 +1325,10 @@ hr {
 
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .whatsappIcon{
+        width: 3rem;
     }
 }
 

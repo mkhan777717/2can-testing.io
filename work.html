@@ -84,6 +84,9 @@
         <!-- Selected Filters -->
         <div class="selected-items" id="selectedItems"></div>
     </div>
+
+    <div id="content">
+
     <div class="divPad" id="div1">
         <p class="workTitle">
             Resham Ke Dhage: Crafting Culture for a Global Runway
@@ -98,14 +101,22 @@
             with pride, and speaks to global audiences with a voice that’s both timeless and true.
         </p>
         <br>
-        <section class="media-grid">
-            <div class="media-item"><img src="./assets/RKD/1.jpg" alt="Image 1"></div>
-            <div class="media-item"><video src="./assets/RKD/video1.mp4" autoplay loop muted playsinline></video></div>
-            <div class="media-item"><img src="./assets/RKD/3.jpg" alt="Image 2"></div>
-            <div class="media-item"><img src="./assets/RKD/5.jpg" alt="Image 3"></div>
-            <div class="media-item"><video src="./assets/RKD/video2.mp4" autoplay loop muted playsinline></video></div>
-            <div class="media-item"><img src="./assets/RKD/6.jpg" alt="Image 4"></div>
-        </section>
+        <div style="display: flex; justify-content: center; height: auto;">
+            <section style="background-color: #FEDD04;">
+                <img src="./assets/RKD/1.jpg" alt="Image 1" style="width: 100%;">
+            </section>
+            <section style="display: flex; flex-direction:column; flex-wrap: wrap;">
+                <div><video class="media-item" src="./assets/RKD/video1.mp4" autoplay loop muted playsinline></video></div>
+                <div><img class="media-item" src="./assets/RKD/3.jpg" alt="Image 2"></div>
+            </section>
+            <section>
+                <div><img class="media-item" src="./assets/RKD/5.jpg" alt="Image 3"></div>
+                <div><video class="media-item" src="./assets/RKD/video2.mp4" autoplay loop muted playsinline></video></div>
+            </section>
+        </div>
+       
+
+        
     </div>
 
     <div class="divPad" id="div2">
@@ -300,7 +311,7 @@
             destination for simplified finance.
         </p>
     </div>
-
+</div>
     <!-- our process -->
     <div class="wordCardWrapper">
         <div class="workCard">
@@ -367,7 +378,7 @@
             <div class="quickLinks">
                 <h3>Let's Connect</h3>
                 <div>
-                    <span style="color: #FEDD04;">Email:</span> hello@2cancreations.com
+                    <span style="color: #FEDD04;">Email:</span> 2cancreation@gmail.com
                 </div>
                 <div>
                     <span style="color: #FEDD04;">Phone:</span> +91921147707
