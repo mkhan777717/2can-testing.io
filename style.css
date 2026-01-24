@@ -297,7 +297,7 @@ a:hover {
 }
 
 .contacNowBottomWrapper {
-    padding: 3em;
+    /* padding: 3em; */
     position: relative;
     margin: 5em;
 }
@@ -391,8 +391,19 @@ a:hover {
     border-radius: 50%;
     color: #FEDD04;
     background-color: #000;
-    padding: 0.5em 0.9em;
+    padding: 0.5em;
     font-weight: 500;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circleInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .workCardNumberText {
@@ -403,6 +414,7 @@ a:hover {
 
 .circleWrapper {
     display: flex;
+    justify-content: space-between;
 }
 
 .wordCardWrapper {
@@ -423,6 +435,18 @@ a:hover {
     position: absolute;
     bottom: -3em;
 
+}
+
+.redBox {
+    background-color: #F9575D;
+    display: flex;
+    text-align: center;
+    padding: 1em;
+    align-items: center;
+    border-radius: 1rem;
+    display: none;
+    width: 75%;
+    font-size: 1.5rem;
 }
 
 .redCirleText {
@@ -1169,13 +1193,6 @@ hr {
     box-sizing: border-box;
 }
 
-/* Responsive for narrower screens */
-@media (max-width: 1200px) {
-    #content .divPad {
-        max-width: 98vw;
-    }
-}
-
 /* RKD Section */
 .rkd-media-grid {
     display: grid;
@@ -1296,18 +1313,6 @@ hr {
     display: block;
     min-width: 100px;
 }
-@media (max-width: 1200px) {
-    .pvr-gallery { padding: 0 0.5em; max-width: 900px; }
-    .pvr-gallery .pvr-fullwidth-img-container { height: 370px; }
-    .pvr-grid { gap: 14px; }
-    .pvr-grid .pvr-img-container { height: 170px; }
-}
-@media (max-width: 900px) {
-    .pvr-gallery { padding: 0; max-width: 100%; }
-    .pvr-gallery .pvr-fullwidth-img-container { height: 260px; }
-    .pvr-grid { grid-template-columns: repeat(2, 1fr); gap: 10px;}
-    .pvr-grid .pvr-img-container { height: 140px; }
-}
 /* College Rivals Grid Styles */
 .college-rivals-layout {
     display: flex;
@@ -1356,16 +1361,6 @@ hr {
     border-radius: 12px;
     display: block;
 }
-@media (max-width: 900px) {
-    .college-rivals-bottom {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-    }
-    .college-rivals-bottom .item:nth-child(3) { grid-column: 1 / 3; }
-    .college-rivals-top video { height: 230px; max-height: 230px; }
-    .college-rivals-bottom video,
-    .college-rivals-bottom img { max-height: 150px;}
-}
 
 /* BEYOND Section */
 .beyond-grid-gallery-new {
@@ -1394,16 +1389,6 @@ hr {
     overflow: hidden;
     box-shadow: 0 4px 18px rgba(30, 0, 70, 0.07);
 }
-@media (max-width: 900px) {
-    .beyond-grid-gallery-new {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 220px repeat(2, 220px);
-        gap: 10px;
-    }
-    .beyond-grid-item-main-new { grid-row: 1 / 2; grid-column: 1 / 3;}
-    .beyond-grid-img { border-radius: 10px;}
-}
-
 /* FABLESTREET GRID */
 .fable-grid-gallery-center-wrapper {
     display: flex;
@@ -1459,21 +1444,6 @@ hr {
     grid-column: 4 / 5;
 }
 .fable-grid-video { background: #faf7fb;}
-@media (max-width: 1200px) {
-    .fable-grid-gallery { max-width: 900px; gap: 10px;}
-}
-@media (max-width: 900px) {
-    .fable-grid-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 35vw); gap: 8px; max-width: 99vw;}
-    .fable-grid-img,
-    .fable-grid-video { aspect-ratio: 16 / 9;}
-    .fable-grid-item.tall-video,
-    .fable-grid-item.same-size-video,
-    .fable-grid-item.same-size-video-3,
-    .fable-grid-item.same-size-video-4 { grid-row: 1 / span 2; grid-column: 2 / 3;}
-    .fable-grid-item.same-size-video-3 { grid-column: 1 / 2;}
-    .fable-grid-item.same-size-video-4 { grid-column: 1 / 2;}
-}
-
 /* INDIACLAN GRID */
 .indiaclan-grid-gallery {
     display: grid;
@@ -1498,7 +1468,6 @@ hr {
     border-radius: 12px;
     object-fit: cover;
     display: block;
-    background: #f6f3ff;
     transition: filter 0.2s;
 }
 .indiaclan-grid-gallery .volume-btn {
@@ -1523,19 +1492,6 @@ hr {
 }
 .indiaclan-grid-gallery .volume-btn:active {
     background: rgba(190, 179, 220, 0.92);
-}
-@media (max-width: 900px) {
-    .indiaclan-grid-gallery { grid-template-columns: repeat(2, 1fr); gap: 12px;}
-    .indiaclan-grid-gallery .indiaclan-video-wrapper { height: 265px;}
-
-    .rkd-media-grid { grid-template-columns: 2fr 1fr; grid-template-rows: repeat(3, 1fr);}
-    .rkd-media-grid .img-bg.big { grid-column: 1 / 2; grid-row: 1 / 4;}
-    .rkd-media-grid .rkd-grid-item:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; }
-    .rkd-media-grid .rkd-grid-item:nth-child(3) { grid-column: 2 / 3; grid-row: 2 / 3; }
-    .rkd-media-grid .rkd-grid-item:nth-child(4) { grid-column: 2 / 3; grid-row: 3 / 4; }
-    .rkd-media-grid .rkd-grid-item:nth-child(5) { display: none; }
-    .rkd-media-grid .rkd-grid-item img,
-    .rkd-media-grid .rkd-grid-item video { max-height: 250px;}
 }
 
 /* College Rivals Festival Grid */
@@ -1607,54 +1563,6 @@ hr {
     z-index: 2;
     transition: background 0.15s;
 }
-@media (max-width: 1100px) {
-    .crivals-grid-gallery {
-        max-width: 99vw;
-        grid-template-rows: repeat(2, 180px);
-        grid-template-columns: repeat(3, 1fr);
-        aspect-ratio: unset;
-        height: unset;
-    }
-    .crivals-grid-item[data-img="1"] { grid-row: 1; grid-column: 1;}
-    .crivals-grid-item[data-img="2"] { grid-row: 1; grid-column: 2;}
-    .crivals-grid-item[data-img="3"] { grid-row: 1; grid-column: 3;}
-    .crivals-grid-item[data-img="4"] { grid-row: 2; grid-column: 1;}
-    .crivals-grid-video-wrapper { grid-row: 2; grid-column: 2 / span 2;}
-
-    .fable-grid-gallery { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 25vw); max-width: 98vw; gap: 10px;}
-    .fable-grid-item.tall-video,
-    .fable-grid-item.same-size-video,
-    .fable-grid-item.same-size-video-3,
-    .fable-grid-item.same-size-video-4 { grid-row: 1 / span 2; grid-column: 2 / 3;}
-    .fable-grid-item.same-size-video-3 { grid-column: 3 / 4;}
-    .fable-grid-item.same-size-video-4 { grid-column: 1 / 2; }
-}
-@media (max-width: 700px) {
-    .crivals-grid-gallery {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 150px);
-        gap: 10px;
-        max-width: 99vw;
-        aspect-ratio: unset;
-    }
-    .crivals-grid-item[data-img="1"] { grid-row: 1; grid-column: 1; }
-    .crivals-grid-item[data-img="2"] { grid-row: 1; grid-column: 2; }
-    .crivals-grid-item[data-img="3"] { grid-row: 2; grid-column: 1; }
-    .crivals-grid-item[data-img="4"] { grid-row: 2; grid-column: 2; }
-    .crivals-grid-video-wrapper { grid-row: 3; grid-column: 1 / span 2; }
-}
-@media (max-width: 480px) {
-    .crivals-grid-gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 140px);
-        gap: 8px;
-    }
-    .crivals-grid-item[data-img="1"] { grid-row: 1; grid-column: 1; }
-    .crivals-grid-item[data-img="2"] { grid-row: 2; grid-column: 1; }
-    .crivals-grid-item[data-img="3"] { grid-row: 3; grid-column: 1; }
-    .crivals-grid-item[data-img="4"] { grid-row: 4; grid-column: 1; }
-    .crivals-grid-video-wrapper { grid-row: 5; grid-column: 1; }
-}
 
 .main-content-wrapper {
     max-width: 1240px;
@@ -1671,21 +1579,47 @@ hr {
     flex-direction: row;
 }
 .main-content-wrapper > div {
-    width: 100%;
+    /* width: 100%; */
     box-sizing: border-box;
-}
-
-@media screen and (max-width: 320px) {
-    .card2{
-        min-height: 100vh;
-     }
-     .card {
-        height: 70vh !important;
-    }
 }
 
 /* --------------------------------------------------- */
 /* media queries */
+
+@media (max-width: 1200px) {
+    #content .divPad {
+        max-width: 98vw;
+    }
+    .pvr-gallery { padding: 0 0.5em; max-width: 900px; }
+    .pvr-gallery .pvr-fullwidth-img-container { height: 370px; }
+    .pvr-grid { gap: 14px; }
+    .pvr-grid .pvr-img-container { height: 170px; }
+    .fable-grid-gallery { max-width: 900px; gap: 10px;}
+
+}
+
+@media (max-width: 1100px) {
+    .crivals-grid-gallery {
+        max-width: 99vw;
+        grid-template-rows: repeat(2, 180px);
+        grid-template-columns: repeat(3, 1fr);
+        aspect-ratio: unset;
+        height: unset;
+    }
+    .crivals-grid-item[data-img="1"] { grid-row: 1; grid-column: 1;}
+    .crivals-grid-item[data-img="2"] { grid-row: 1; grid-column: 2;}
+    .crivals-grid-item[data-img="3"] { grid-row: 1; grid-column: 3;}
+    .crivals-grid-item[data-img="4"] { grid-row: 2; grid-column: 1;}
+    .crivals-grid-video-wrapper { grid-row: 2; grid-column: 2 / span 2;}
+
+    .fable-grid-gallery { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 25vw); max-width: 98vw; gap: 10px;}
+    .fable-grid-item.tall-video,
+    .fable-grid-item.same-size-video,
+    .fable-grid-item.same-size-video-3,
+    .fable-grid-item.same-size-video-4 { grid-row: 1 / span 2; grid-column: 2 / 3;}
+    .fable-grid-item.same-size-video-3 { grid-column: 3 / 4;}
+    .fable-grid-item.same-size-video-4 { grid-column: 1 / 2; }
+}
 
 @media (max-width: 1024px) {
     .card {
@@ -1710,6 +1644,47 @@ hr {
         width: 27vw;
         min-height: 98vh;
     }
+}
+
+@media (max-width: 900px) {
+    .pvr-gallery { padding: 0; max-width: 100%; }
+    .pvr-gallery .pvr-fullwidth-img-container { height: 260px; }
+    .pvr-grid { grid-template-columns: repeat(2, 1fr); gap: 10px;}
+    .pvr-grid .pvr-img-container { height: 340px; }
+
+    .college-rivals-bottom {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    .college-rivals-bottom .item:nth-child(3) { grid-column: 1 / 3; }
+    .college-rivals-top video { height: 230px; max-height: 230px; }
+    .college-rivals-bottom video,
+    .college-rivals-bottom img { max-height: 350px;}
+    .beyond-grid-gallery-new {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .beyond-grid-img { border-radius: 10px;}
+    .fable-grid-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 35vw); gap: 8px; max-width: 99vw;}
+    .fable-grid-img,
+    .fable-grid-video { aspect-ratio: 16 / 9;}
+    .fable-grid-item.tall-video,
+    .fable-grid-item.same-size-video,
+    .fable-grid-item.same-size-video-3,
+    .fable-grid-item.same-size-video-4 { grid-row: 1 / span 2; grid-column: 2 / 3;}
+    .fable-grid-item.same-size-video-3 { grid-column: 1 / 2;}
+    .fable-grid-item.same-size-video-4 { grid-column: 1 / 2;}
+    .indiaclan-grid-gallery { grid-template-columns: repeat(2, 1fr); gap: 12px;}
+    .indiaclan-grid-gallery .indiaclan-video-wrapper { height: 265px;}
+
+    .rkd-media-grid { grid-template-columns: 2fr 1fr; grid-template-rows: repeat(3, 1fr);}
+    .rkd-media-grid .img-bg.big { grid-column: 1 / 2; grid-row: 1 / 4;}
+    .rkd-media-grid .rkd-grid-item:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; }
+    .rkd-media-grid .rkd-grid-item:nth-child(3) { grid-column: 2 / 3; grid-row: 2 / 3; }
+    .rkd-media-grid .rkd-grid-item:nth-child(4) { grid-column: 2 / 3; grid-row: 3 / 4; }
+    .rkd-media-grid .rkd-grid-item:nth-child(5) { display: none; }
+    .rkd-media-grid .rkd-grid-item img,
+    .rkd-media-grid .rkd-grid-item video { max-height: 250px;}
 }
 
 @media (max-width: 768px) {
@@ -1881,8 +1856,36 @@ hr {
         min-height: 10rem !important;
     }
 
+    .redCircle{
+        display: none;
+    }
+    .redBox{
+        display: block;
+    }
+
+    .workCard{
+        margin: 1rem;
+    }
+
+    .contacNowBottomWrapperForWork{
+        margin: 4rem 0px;
+    }
 }
 
+@media (max-width: 700px) {
+    .crivals-grid-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 150px);
+        gap: 10px;
+        max-width: 99vw;
+        aspect-ratio: unset;
+    }
+    .crivals-grid-item[data-img="1"] { grid-row: 1; grid-column: 1; }
+    .crivals-grid-item[data-img="2"] { grid-row: 1; grid-column: 2; }
+    .crivals-grid-item[data-img="3"] { grid-row: 2; grid-column: 1; }
+    .crivals-grid-item[data-img="4"] { grid-row: 2; grid-column: 2; }
+    .crivals-grid-video-wrapper { grid-row: 3; grid-column: 1 / span 2; }
+}
 
 @media (max-width: 680px) {
     .card {
@@ -1893,21 +1896,14 @@ hr {
     }
 }
 
-
 @media (max-width: 668px) {
     .workCard{
         margin-bottom: 0;
     }
-    .redCircle {
-        bottom: -24vh;
-        height: 10em;
-        width: 10em;
-    }
 
     .workCardNumberText {
-        font-size: 14px;
+        font-size: 1rem;
         display: inline-block;
-        margin-top: 1em;
     }
 
     .redCirleText {
@@ -1986,7 +1982,7 @@ hr {
     .fable-grid-item.same-size-video-4 { grid-row: 1 / span 2; grid-column: 1 / 2;}
 
     .indiaclan-grid-gallery { grid-template-columns: 1fr; gap: 10px;}
-    .indiaclan-grid-gallery .indiaclan-video-wrapper { border-radius: 8px; height: 190px;}
+    .indiaclan-grid-gallery .indiaclan-video-wrapper { border-radius: 8px; height: 24rem;}
     .indiaclan-grid-gallery video { border-radius: 8px;}
 }
 
@@ -2061,10 +2057,6 @@ hr {
         padding: 2em;
     }
 
-    .contacNowBottomWrapper{
-        margin-top: 0px;
-    }
-
     .contactBtnYellow{
         font-size: 1em;
     }
@@ -2079,10 +2071,6 @@ hr {
 
     .contacNowBottomWrapper {
         margin-bottom: 1em;
-    }
-
-    .contacNowBottomWrapperForWork {
-        margin-top: 10em;
     }
 
     .workTitle{
@@ -2111,6 +2099,7 @@ hr {
 
     .workCardSubTitle {
         font-size: 1em;
+        font-weight: 600;
     }
 
     .aboutTitle {
@@ -2166,14 +2155,20 @@ hr {
     }
 }
 
-
+@media (max-width: 480px) {
+    .crivals-grid-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 24rem);
+        gap: 8px;
+    }
+    .crivals-grid-item[data-img="1"] { grid-row: 1; grid-column: 1; }
+    .crivals-grid-item[data-img="2"] { grid-row: 2; grid-column: 1; }
+    .crivals-grid-item[data-img="3"] { grid-row: 3; grid-column: 1; }
+    .crivals-grid-item[data-img="4"] { grid-row: 4; grid-column: 1; }
+    .crivals-grid-video-wrapper { grid-row: 5; grid-column: 1; }
+}
 
 @media (max-width: 426px) {
-    
-    .card{
-        min-height: 22em;
-    }
-
     .cardTitle {
         font-size: 1em;
     }
@@ -2198,14 +2193,13 @@ hr {
         font-size: 1.2rem;
     }
 
-
     .card {
         height: 50vh !important;
         min-height: 20em !important;
     }
 
-    .redCircle{
-        bottom: -17vh;
+    .workCardNumberText{
+        font-size: 12px;
     }
 }
 
@@ -2214,4 +2208,13 @@ hr {
         height: 16rem !important;
     }
     
+}
+
+@media screen and (max-width: 320px) {
+    .card2{
+        min-height: 100vh;
+     }
+     .card {
+        height: 70vh !important;
+    }
 }
