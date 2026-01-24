@@ -4,11 +4,109 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>2CAN creations</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <style>
+        /* Removed all inline CSS to internal CSS block */
+
+        /* Containers */
+        .maxWidth1240 {
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        /* Inline text color overrides */
+        .text-yellow {
+            color: #FEDD04;
+        }
+        .text-red {
+            color: #F9575D;
+        }
+        .text-white {
+            color: #fff;
+        }
+        .fw-300 {
+            font-weight: 300;
+        }
+        .lh-15 {
+            line-height: 1.5;
+        }
+        .lh-17 {
+            line-height: 1.7;
+        }
+        .mt-4px {
+            margin-top: 4px;
+        }
+        .mt-03em {
+            margin-top: 0.3em;
+        }
+
+        /* Card styling that was inline */
+        .card-flex {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 1rem;
+        }
+        .workBtnWrapper-absolute {
+            position: absolute;
+            bottom: 1em;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+        }
+        .card2-relative {
+            position: relative;
+        }
+        .caseStudyWrapper-absolute {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1em;
+        }
+        .imgCardWidth200 {
+            width: 200px;
+        }
+
+        /* Remove underline from default link style for quick links */
+        .quickLinks a {
+            text-decoration: none;
+        }
+
+        /* Marquee override if needed (if duplicated id or intended multiple times) */
+        .marquee-content span {
+            /* Keep span styles inheriting color and font from parent unless specified */
+        }
+
+        /* Responsive specifics for yellow, red colored text in hero section mobile */
+        .mobileTitle .hero-yellow {
+            color: #FEDD04;
+        }
+        .mobileTitle .hero-red {
+            color: #F9575D;
+        }
+
+        /* Whatsapp icon */
+        .whatsappIcon img {
+            width: 64px;
+        }
+
+        /* Utility fix for button in footer and yellow button (if not present in style.css) */
+        .contactBtnYellow {
+            background-color: #FEDD04;
+            color: #222;
+            border: none;
+            padding: 1em 2em;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,28 +132,27 @@
     </nav>
 
 
-    <div class="videoWrapper">
+    <div class="videoWrapper maxWidth1240">
         <video autoplay loop muted playsinline class="videoStyle">
             <source src="./assets/web-video.webm" type="video/webm" />
             Your browser does not support the video tag.
         </video>
     </div>
 
-
-    <div class="divPad">
+    <div class="divPad maxWidth1240">
         <div class="desktopTitle">
-            <p class="titleBig">We build brands with <span style="color: #FEDD04;">Soul, Story</span>
+            <p class="titleBig">We build brands with <span class="text-yellow">Soul, Story</span>
                 & a splash of
-                <span style="color: #F9575D;">Rebellion</span>
+                <span class="text-red">Rebellion</span>
             </p>
         </div>
 
         <div class="mobileTitle">
             <p class="titleBig">We build</p>
             <p class="titleBig">brands with</p> 
-            <p class="titleBig" style="color: #FEDD04;">Soul, Story</p>
+            <p class="titleBig hero-yellow">Soul, Story</p>
             <p class="titleBig">& a splash of</p>
-            <p class="titleBig" style="color: #F9575D;">Rebellion</p>
+            <p class="titleBig hero-red">Rebellion</p>
         </div>
         
         <br>
@@ -98,8 +195,8 @@
     </div>
     <br>
 
-    <div class="divPad" id="whatWeDo">
-        <p class="titleBig">What We <span style="color: #FEDD04;">Do?</span></p>
+    <div class="divPad maxWidth1240" id="whatWeDo">
+        <p class="titleBig">What We <span class="text-yellow">Do?</span></p>
         <br>
 
         <p class="subTitle">
@@ -111,98 +208,83 @@
     </div>
     <br>
 
-    <div class="cardWrapper">
-        <div class="card">
+    <div class="cardWrapper1 maxWidth1240">
+        <div class="card card-flex">
             <div class="cardHead">
                 <img src="./assets/heart.png" class="heartImg" alt="heart" />
-                <p class="cardTitle">How your brand looks</p>
+                <p class="cardTitle lh-15">How your brand looks</p>
             </div>
-            <br>
-
             <div>
-                <p style="color: #FEDD04;font-weight:300;">We shape how people see you, and what they remember.</p>
+                <p class="text-yellow fw-300 lh-17">We shape how people see you, and what they remember.</p>
             </div>
-            <br>
-
             <div class="listWrapper">
-                <ul>
-                    <li class="listText">Brand Strategy & Positioning</li>
-                    <li class="listText">Voice & Narrative Systems</li>
-                    <li class="listText">Visual Identity Design</li>
-                    <li class="listText">Archetype & Culture Mapping</li>
+                <ul class="lh-17">
+                    <li class="listText lh-17">Brand Strategy & Positioning</li>
+                    <li class="listText lh-17">Voice & Narrative Systems</li>
+                    <li class="listText lh-17">Visual Identity Design</li>
+                    <li class="listText lh-17">Archetype & Culture Mapping</li>
                 </ul>
             </div>
-            <br>
-
-            <div class="workBtnWrapper">
+            <div class="workBtnWrapper workBtnWrapper-absolute">
                 <a href="./work.html" target="_blank">
-                    <button class="ourWorkBtn">Our Work <span>
-                        <img src="./assets/arrow.png" width="20"
-    style="margin-top: 4px;" alt="arrow" /></span>
+                    <button class="ourWorkBtn">Our Work 
+                        <span>
+                            <img src="./assets/arrow.png" width="20" class="mt-4px" alt="arrow" />
+                        </span>
                     </button>
                 </a>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card card-flex">
             <div class="cardHead">
                 <img src="./assets/heart.png" class="heartImg" alt="heart" />
-                <p class="cardTitle">How your brand is heard</p>
+                <p class="cardTitle lh-15">How your brand is heard</p>
             </div>
-            <br>
-
             <div>
-                <p style="color: #FEDD04;font-weight:300;">We build systems that help you speak with clarity and
-                    consistency.</p>
+                <p class="text-yellow fw-300 lh-17">We build systems that help you speak with clarity and consistency.</p>
             </div>
-            <br>
-
             <div class="listWrapper">
-                <ul>
-                    <li class="listText">Campaign Concepts & Content Strategy</li>
-                    <li class="listText">Social Content Systems (Instagram, YouTube, WhatsApp, Discord, etc.)</li>
-                    <li class="listText">Founder-Led & Creator-Led Playbooks</li>
-                    <li class="listText">Platform-Native Storytelling</li>
+                <ul class="lh-17">
+                    <li class="listText lh-17">Campaign Concepts & Content Strategy</li>
+                    <li class="listText lh-17">Social Content Systems (Instagram, YouTube, WhatsApp, Discord, etc.)</li>
+                    <li class="listText lh-17">Founder-Led & Creator-Led Playbooks</li>
+                    <li class="listText lh-17">Platform-Native Storytelling</li>
                 </ul>
             </div>
-            <br>
-
-            <div class="workBtnWrapper">
+            <div class="workBtnWrapper workBtnWrapper-absolute">
                 <a href="./work.html" target="_blank">
-                    <button class="ourWorkBtn">Our Work <span><img src="./assets/arrow.png" width="20"
-                                style="margin-top: 4px;" alt="arrow" /></span>
+                    <button class="ourWorkBtn">Our Work 
+                        <span>
+                            <img src="./assets/arrow.png" width="20" class="mt-4px" alt="arrow" />
+                        </span>
                     </button>
                 </a>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card card-flex">
             <div class="cardHead">
                 <img src="./assets/heart.png" class="heartImg" alt="heart" />
-                <p class="cardTitle">How your brand is experienced</p>
+                <p class="cardTitle lh-15">How your brand is experienced</p>
             </div>
-            <br>
-
             <div>
-                <p style="color: #FEDD04;font-weight:300;">We bring your brand to life through smart, culture-first
-                    execution.</p>
+                <p class="text-yellow fw-300 lh-17">We bring your brand to life through smart, culture-first execution.</p>
             </div>
-            <br>
-
             <div class="listWrapper">
-                <ul>
-                    <li class="listText">Go-To-Market Strategy</li>
-                    <li class="listText">Pop-Ups, Event IPs & Activations</li>
-                    <li class="listText">Influencer & Community Marketing</li>
-                    <li class="listText">Media Buying (Digital, Social, Community)</li>
+                <ul class="lh-17">
+                    <li class="listText lh-17">Go-To-Market Strategy</li>
+                    <li class="listText lh-17">Pop-Ups, Event IPs & Activations</li>
+                    <li class="listText lh-17">Influencer & Community Marketing</li>
+                    <li class="listText lh-17">Media Buying (Digital, Social, Community)</li>
                 </ul>
             </div>
-            <br>
-
-            <div class="workBtnWrapper">
+            <div class="workBtnWrapper workBtnWrapper-absolute">
                 <a href="./work.html" target="_blank">
-                    <button class="ourWorkBtn">Our Work <span><img src="./assets/arrow.png" width="20"
-                                style="margin-top: 4px;" alt="arrow" /></span>
+                    <button class="ourWorkBtn">Our Work 
+                        <span>
+                            <img src="./assets/arrow.png" width="20" class="mt-4px" alt="arrow" />
+                        </span>
                     </button>
                 </a>
             </div>
@@ -236,10 +318,9 @@
     </div>
     <br>
 
-    <div class="divPad">
-        <p class="titleBig">What We <span style="color: #FEDD04;">did?</span></p>
+    <div class="divPad maxWidth1240">
+        <p class="titleBig">What We <span class="text-yellow">did?</span></p>
         <br>
-
         <p class="subTitle">
             Every project is a love letter to the brands brave enough to be different. Here's what happens when strategy
             meets soul.
@@ -247,9 +328,8 @@
         <br>
     </div>
     <br>
-
-    <div class="cardWrapper">
-        <div class="card2">
+    <div class="cardWrapper maxWidth1240">
+        <div class="card2 card2-relative">
             <div class="imgCardWrapper">
                 <img class="imgCard" src="./assets/RKD/5.jpg" alt="image" />
                 <p class="ribbonTag">Crafted</p>
@@ -262,20 +342,19 @@
                 <div>
                     <p class="listText">When Mohena dreamt of blending Indian heritage with Australian luxury, we stepped in to bring that vision to life end...</p>
                 </div>
-
-                <div class="caseStudyWrapper">
-                    <div>
-                        <button class="cardTwoBtn">Authentic</button> &nbsp;
-                        <button class="cardTwoBtn">Community - first</button>
-                    </div>
-                    <a href="./work.html?filter=rkd" class="caseStudy"
-                        target="_blank">View Case Study &nbsp;<span style="margin-top: 0.3em;"><img
-                                src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
+            </div>
+            <div class="caseStudyWrapper caseStudyWrapper-absolute">
+                <div>
+                    <button class="cardTwoBtn">Authentic</button> &nbsp;
+                    <button class="cardTwoBtn">Community - first</button>
                 </div>
+                <a href="./work.html?filter=rkd" class="caseStudy"
+                    target="_blank">View Case Study &nbsp;<span class="mt-03em"><img
+                            src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
             </div>
         </div>
 
-        <div class="card2">
+        <div class="card2 card2-relative">
             <div class="imgCardWrapper">
                 <img class="imgCard" src="./assets/pvr/Main-Image.jpeg" alt="image" />
                 <p class="ribbonTag">Crafted</p>
@@ -288,20 +367,19 @@
                 <div>
                     <p class="listText">To transform PVR’s underused courtyards into Gen Z magnets and fuel excitement for the upcoming F1 movie, we...</p>
                 </div>
-
-                <div class="caseStudyWrapper">
-                    <div>
-                        <button class="cardTwoBtn">Authentic</button> &nbsp;
-                        <button class="cardTwoBtn">Community - first</button>
-                    </div>
-                    <a href="./work.html?filter=pvr" class="caseStudy"
-                        target="_blank">View Case Study &nbsp;<span style="margin-top: 0.3em;"><img
-                                src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
+            </div>
+            <div class="caseStudyWrapper caseStudyWrapper-absolute">
+                <div>
+                    <button class="cardTwoBtn">Authentic</button> &nbsp;
+                    <button class="cardTwoBtn">Community - first</button>
                 </div>
+                <a href="./work.html?filter=pvr" class="caseStudy"
+                    target="_blank">View Case Study &nbsp;<span class="mt-03em"><img
+                            src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
             </div>
         </div>
 
-        <div class="card2">
+        <div class="card2 card2-relative">
             <div class="imgCardWrapper">
                 <img class="imgCard" src="./assets/college-rivals/5.jpg" alt="image" />
                 <p class="ribbonTag">Crafted</p>
@@ -314,20 +392,19 @@
                 <div>
                     <p class="listText">College Rivals wasn’t just another esports tournament, it was a culture movement in the making...</p>
                 </div>
-
-                <div class="caseStudyWrapper">
-                    <div>
-                        <button class="cardTwoBtn">Authentic</button> &nbsp;
-                        <button class="cardTwoBtn">Community - first</button>
-                    </div>
-                    <a href="./work.html?filter=clgRival" class="caseStudy"
-                        target="_blank">View Case Study &nbsp;<span style="margin-top: 0.3em;"><img
-                                src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
+            </div>
+            <div class="caseStudyWrapper caseStudyWrapper-absolute">
+                <div>
+                    <button class="cardTwoBtn">Authentic</button> &nbsp;
+                    <button class="cardTwoBtn">Community - first</button>
                 </div>
+                <a href="./work.html?filter=clgRival" class="caseStudy"
+                    target="_blank">View Case Study &nbsp;<span class="mt-03em"><img
+                            src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
             </div>
         </div>
 
-        <div class="card2">
+        <div class="card2 card2-relative">
             <div class="imgCardWrapper">
                 <img class="imgCard" src="./assets/beyond/3.png" alt="image" />
                 <p class="ribbonTag">Crafted</p>
@@ -340,20 +417,19 @@
                 <div>
                     <p class="listText">We partnered with BEYOND to shape it into a Gen Z first entertainment collective, rooted in fandoms...</p>
                 </div>
-
-                <div class="caseStudyWrapper">
-                    <div>
-                        <button class="cardTwoBtn">Authentic</button> &nbsp;
-                        <button class="cardTwoBtn">Community - first</button>
-                    </div>
-                    <a href="./work.html?filter=beyond" class="caseStudy"
-                        target="_blank">View Case Study &nbsp;<span style="margin-top: 0.3em;"><img
-                                src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
+            </div>
+            <div class="caseStudyWrapper caseStudyWrapper-absolute">
+                <div>
+                    <button class="cardTwoBtn">Authentic</button> &nbsp;
+                    <button class="cardTwoBtn">Community - first</button>
                 </div>
+                <a href="./work.html?filter=beyond" class="caseStudy"
+                    target="_blank">View Case Study &nbsp;<span class="mt-03em"><img
+                            src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
             </div>
         </div>
 
-        <div class="card2">
+        <div class="card2 card2-relative">
             <div class="imgCardWrapper">
                 <img class="imgCard" src="./assets/fable/4.jpg" alt="image" />
                 <p class="ribbonTag">Crafted</p>
@@ -366,20 +442,19 @@
                 <div>
                     <p class="listText">We believe every brand has a heartbeat. Our job is to find it and make it sing.</p>
                 </div>
-
-                <div class="caseStudyWrapper">
-                    <div>
-                        <button class="cardTwoBtn">Authentic</button> &nbsp;
-                        <button class="cardTwoBtn">Community - first</button>
-                    </div>
-                    <a href="./work.html?filter=fableStreet" class="caseStudy"
-                        target="_blank">View Case Study &nbsp;<span style="margin-top: 0.3em;"><img
-                                src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
+            </div>
+            <div class="caseStudyWrapper caseStudyWrapper-absolute">
+                <div>
+                    <button class="cardTwoBtn">Authentic</button> &nbsp;
+                    <button class="cardTwoBtn">Community - first</button>
                 </div>
+                <a href="./work.html?filter=fableStreet" class="caseStudy"
+                    target="_blank">View Case Study &nbsp;<span class="mt-03em"><img
+                            src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
             </div>
         </div>
 
-        <div class="card2">
+        <div class="card2 card2-relative">
             <div class="imgCardWrapper">
                 <img class="imgCard" src="./assets/indiaclan/Main-Image.webp" alt="image" />
                 <p class="ribbonTag">Crafted</p>
@@ -393,22 +468,21 @@
                     <p class="listText">When Indiaclan, a next gen financial education and trading platform, wanted to demystify markets and
             drive...</p>
                 </div>
-
-                <div class="caseStudyWrapper">
-                    <div>
-                        <button class="cardTwoBtn">Authentic</button> &nbsp;
-                        <button class="cardTwoBtn">Community - first</button>
-                    </div>
-                    <a href="./work.html?filter=indianClan" class="caseStudy"
-                        target="_blank">View Case Study &nbsp;<span style="margin-top: 0.3em;"><img
-                                src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
+            </div>
+            <div class="caseStudyWrapper caseStudyWrapper-absolute">
+                <div>
+                    <button class="cardTwoBtn">Authentic</button> &nbsp;
+                    <button class="cardTwoBtn">Community - first</button>
                 </div>
+                <a href="./work.html?filter=indianClan" class="caseStudy"
+                    target="_blank">View Case Study &nbsp;<span class="mt-03em"><img
+                            src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
             </div>
         </div>
 
-        <div class="card2">
+        <div class="card2 card2-relative">
             <div class="imgCardWrapper">
-                <img class="imgCard" src="./assets/college-rivals/Main-Image.jpg" alt="image" />
+                <img class="imgCard" src="./assets/college-rivals/4.jpg" alt="image" />
                 <p class="ribbonTag">Crafted</p>
             </div>
             <div class="card2ContentWrapper">
@@ -419,22 +493,20 @@
                 <div>
                     <p class="listText">We believe every brand has a heartbeat. Our job is to find it and make it sing.</p>
                 </div>
-
-                <div class="caseStudyWrapper">
-                    <div>
-                        <button class="cardTwoBtn">Authentic</button> &nbsp;
-                        <button class="cardTwoBtn">Community - first</button>
-                    </div>
-                    <a href="./work.html?filter=clgRivalNESCO" class="caseStudy"
-                        target="_blank">View Case Study &nbsp;<span style="margin-top: 0.3em;"><img
-                                src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
+            </div>
+            <div class="caseStudyWrapper caseStudyWrapper-absolute">
+                <div>
+                    <button class="cardTwoBtn">Authentic</button> &nbsp;
+                    <button class="cardTwoBtn">Community - first</button>
                 </div>
+                <a href="./work.html?filter=clgRivalNESCO" class="caseStudy"
+                    target="_blank">View Case Study &nbsp;<span class="mt-03em"><img
+                            src="./assets/arrow-yellow.png" width="15" alt="arrow" /></span></a>
             </div>
         </div>
     </div>
     <br>
-
-    <div class="card3Wrapper">
+    <div class="card3Wrapper maxWidth1240">
         <div class="card3">
             <p>
                 "2CAN didn't just design our brand, they helped us remember why we started our business in the first place."
@@ -445,7 +517,7 @@
     </div>
     
 
-    <div class="contacNowBottomWrapper">
+    <div class="contacNowBottomWrapper maxWidth1240">
         <p class="subTitle">Ready to create something that matters?</p>
         <br>
 
@@ -471,7 +543,7 @@
             </div>
             <div class="quickLinks">
                 <h3>Quick Links</h3>
-                <a href="/" style="color: #FEDD04;">Home</a>
+                <a href="/" class="text-yellow">Home</a>
                 <a href="">What we do?</a>
                 <a href="/work.html">What we did?</a>
                 <a href="/about.html">Who are we?</a>
@@ -481,10 +553,10 @@
             <div class="quickLinks">
                 <h3>Let's Connect</h3>
                 <div>
-                    <span style="color: #FEDD04;">Email:</span> 2cancreation@gmail.com
+                    <span class="text-yellow">Email:</span> 2cancreation@gmail.com
                 </div>
                 <div>
-                    <span style="color: #FEDD04;">Phone:</span> +91921147707
+                    <span class="text-yellow">Phone:</span> +91921147707
                 </div>
             </div>
         </div>
