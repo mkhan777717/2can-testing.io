@@ -1679,6 +1679,11 @@ hr {
         width: 27vw;
         min-height: 98vh;
     }
+
+    .divPadFilter{
+        width: 100vw;
+        padding: 3.2em 2.9em;
+    }
 }
 
 @media (max-width: 900px) {

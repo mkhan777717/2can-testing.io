@@ -264,4 +264,26 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+
+  function setupVolumeToggles(wrappersSelector, btnClass, iconClass) {
+    document.querySelectorAll(wrappersSelector).forEach(wrapper => {
+      const video = wrapper.querySelector('video');
+      const btn = wrapper.querySelector(`.${btnClass}`);
+      const icon = btn.querySelector(`.${iconClass}`);
+      // Set initial icon
+      icon.textContent = video.muted ? "🔇" : "🔊";
+      btn.addEventListener('click', () => {
+        video.muted = !video.muted;
+        if (!video.muted) {
+          video.volume = 0.6;
+        }
+        icon.textContent = video.muted ? "🔇" : "🔊";
+      });
+    });
+  }
+
+  setupVolumeToggles('.crivals-grid-video-wrapper', 'crivals-volume-btn', 'crivals-volume-icon');
+  setupVolumeToggles('.indiaclan-grid-gallery .indiaclan-video-wrapper', 'volume-btn', 'volume-icon');
+
 })
