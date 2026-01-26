@@ -1682,7 +1682,7 @@ hr {
 
     .divPadFilter{
         width: 100vw;
-        padding: 3.2em 2.9em;
+        padding: 3.2em 4em;
     }
 }
 
@@ -1943,6 +1943,10 @@ hr {
     .contacNowBottomWrapperForWork{
         margin: 4rem 0px;
     }
+
+    .divPadFilter{
+        padding: 0px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -2105,9 +2109,6 @@ hr {
     .filterBtn{
         font-size: 1em;
     }
-    .divPadFilter{
-        padding: 0px 2em;
-    }
  .dropdown-content{
         width: 85vw;
     }
@@ -2163,7 +2164,7 @@ hr {
     }
 
     .divPad {
-        padding: 2em;
+        padding: 1rem 2em;
     }
 
     .contactBtnYellow{
@@ -2318,6 +2319,10 @@ hr {
     .workCardNumberText{
         font-size: 12px;
     }
+
+    .divPadFilter{
+        padding: 2rem 0;
+    }
     
 }
 
@@ -2332,6 +2337,9 @@ hr {
     .divPadWrapper{
         padding: 3.2em 2.9em;
     }
+    .divPadFilter{
+        padding: 0 1rem;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -2340,5 +2348,9 @@ hr {
      }
      .card {
         height: 70vh !important;
+    }
+    .divPadFilter{
+        width: 100vw;
+        padding: 0 2rem;
     }
 }
