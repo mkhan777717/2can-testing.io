@@ -2141,7 +2141,7 @@ hr {
 
     .card2 {
         width: 100%;
-        min-height: 38em;
+        min-height: 35rem;
     }
 
     .cardTitle{
@@ -2307,7 +2307,7 @@ hr {
     }
 
     .card2{
-        min-height: 90vh !important;
+        min-height: 35rem !important;
     }
 
     .workCardNumberText{
@@ -2321,7 +2321,7 @@ hr {
         height: 16rem !important;
     }
     .card{
-        height: 70vh !important;
+        height: 23rem !important;
         min-height: 20em !important;
     }
     .divPadWrapper{
