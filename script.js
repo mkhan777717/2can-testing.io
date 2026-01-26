@@ -10,8 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (div) divs[`div${i}`] = div;
   }
 
-  const params = new URLSearchParams(window.location.search);
-  const filter = params.get("filter");
+  // Helper to remove filter param from URL without reloading page
+  function removeFilterFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("filter")) {
+      params.delete("filter");
+      const newURL =
+        window.location.pathname +
+        (params.toString() ? "?" + params.toString() : "") +
+        window.location.hash;
+      window.history.replaceState({}, "", newURL);
+    }
+  }
+
+  let params = new URLSearchParams(window.location.search);
+  let filter = params.get("filter");
 
   const filters = [
     "rkd",
@@ -140,6 +153,20 @@ document.addEventListener("DOMContentLoaded", () => {
           checkbox.checked = false;
           updateSelectedTags();
           toggleDivs();
+
+          // Remove filter from URL if a tag (filter) is unmatched
+          // Get all checked checkboxes after unchecking this one
+          const stillChecked = dropdownContent.querySelectorAll("input:checked");
+          // If there are no more filters checked, remove filter= param from URL
+          if (stillChecked.length === 0) {
+            removeFilterFromURL();
+          } else if (filter) {
+            // If a filter param was set and this was the *only* selected one, remove it
+            // or if the removed tag equaled the URL filter param value
+            // However, in current code, filter=string, but dropdown values are rich text
+            // So we remove filter if any filter param is present, but tag removal breaks original URL intent
+            removeFilterFromURL();
+          }
         });
         selectedItemsContainer.appendChild(tag);
       });
@@ -168,6 +195,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       // If fableStreet filter is active (for moving div5 to top)
+      params = new URLSearchParams(window.location.search);
+      filter = params.get("filter");
       if (filter === "fableStreet") {
         const div5 = divs["div5"];
         if (div5 && div5.style.display !== "none" && div5.parentNode && div5.parentNode.id === "content") {
@@ -210,12 +239,14 @@ document.addEventListener("DOMContentLoaded", () => {
         default: divKey = ""; break;
       }
 
+      // Hide all divs first, then show only the matched one
+      Object.values(divs).forEach(div => div.style.display = "none");
+
       if (divKey && divFilters[divKey]) {
-        // First uncheck all checkboxes
+        // Only check checkboxes related to this divKey
         const checkboxes = dropdownContent.querySelectorAll("input[type='checkbox']");
         checkboxes.forEach((cb) => (cb.checked = false));
 
-        // Check only those related to the selected filter's divFilters
         divFilters[divKey].forEach((val) => {
           const checkbox = Array.from(checkboxes).find((cb) => cb.value === val);
           if (checkbox) checkbox.checked = true;
@@ -223,16 +254,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Update selected tags and UI
         updateSelectedTags();
-        toggleDivs();
 
-        // Move to top if filter is "fableStreet"
+        // Display only the relevant div
+        if (divs[divKey]) {
+          divs[divKey].style.display = "block";
+        }
+
+        // Special handling for fableStreet
         if (filter === "fableStreet" && divs["div5"] && divs["div5"].parentNode && divs["div5"].parentNode.id === "content") {
           moveDivToTopInContent(divs["div5"]);
         }
-      } else {
-        // If for some reason, divKey is not matched, hide all divs
-        Object.values(divs).forEach(div => div.style.display = "none");
       }
+      // else -- all divs are hidden if filter is invalid
     } else {
       // If no filter in URL, show all by default (or adapt as needed)
       Object.values(divs).forEach(div => div.style.display = "");
@@ -256,110 +289,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-  // carousel
-  const cards = document.querySelectorAll(".cardCarousel");
-  const dots = document.querySelectorAll(".dot");
-  const leftArrow = document.querySelector(".nav-arrow.left");
-  const rightArrow = document.querySelector(".nav-arrow.right");
-  let currentIndex = 0;
-  let isAnimating = false;
-
-  function updateCarousel(newIndex) {
-    if (isAnimating) return;
-    isAnimating = true;
-
-    currentIndex = (newIndex + cards.length) % cards.length;
-
-    cards.forEach((card, i) => {
-      const offset = (i - currentIndex + cards.length) % cards.length;
-
-      card.classList.remove(
-        "center",
-        "left-1",
-        "left-2",
-        "right-1",
-        "right-2",
-        "hidden"
-      );
-
-      if (offset === 0) {
-        card.classList.add("center");
-      } else if (offset === 1) {
-        card.classList.add("right-1");
-      } else if (offset === 2) {
-        card.classList.add("right-2");
-      } else if (offset === cards.length - 1) {
-        card.classList.add("left-1");
-      } else if (offset === cards.length - 2) {
-        card.classList.add("left-2");
-      } else {
-        card.classList.add("hidden");
-      }
-    });
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentIndex);
-    });
-
-    setTimeout(() => {
-      isAnimating = false;
-    }, 800);
-  }
-
-  leftArrow.addEventListener("click", () => {
-    updateCarousel(currentIndex - 1);
-  });
-
-  rightArrow.addEventListener("click", () => {
-    updateCarousel(currentIndex + 1);
-  });
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      updateCarousel(i);
-    });
-  });
-
-  cards.forEach((card, i) => {
-    card.addEventListener("click", () => {
-      updateCarousel(i);
-    });
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") {
-      updateCarousel(currentIndex - 1);
-    } else if (e.key === "ArrowRight") {
-      updateCarousel(currentIndex + 1);
-    }
-  });
-
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  document.addEventListener("touchstart", (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
-
-  document.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-
-  function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-
-    if (Math.abs(diff) > swipeThreshold) {
-      if (diff > 0) {
-        updateCarousel(currentIndex + 1);
-      } else {
-        updateCarousel(currentIndex - 1);
-      }
-    }
-  }
-
-  updateCarousel(0);
-
-});
+})
