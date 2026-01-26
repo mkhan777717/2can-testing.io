@@ -17,6 +17,19 @@ export function initHeader() {
     header.style.background = 'black';
 
     header.innerHTML = `
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>2CAN creations</title>
+        <meta name="description" content="2CAN creations - One stop solution for all your marketing needs">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.cdnfonts.com/css/general-sans" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" type="image/png" href="/assets/favicon.png">
+    </head>
          <nav class="navPad">
         <a href="/">
             <img class="logo" src="./assets/logo-new.png" alt="logo" />

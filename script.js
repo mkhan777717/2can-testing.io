@@ -11,24 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   app.append(initFooter());
 
 
-  // check for mobile view
-  function showCorrectVideo() {
-    // You can adjust the breakpoint (e.g., 768) as you wish
-    var isMobile = window.matchMedia("(max-width: 767px)").matches;
-    var desktopWrap = document.getElementById("desktopVideoWrapper");
-    var mobileWrap = document.getElementById("mobileVideoWrapper");
-    if (isMobile) {
-      if (desktopWrap) desktopWrap.style.display = "none";
-      if (mobileWrap) mobileWrap.style.display = "";
-    } else {
-      if (desktopWrap) desktopWrap.style.display = "";
-      if (mobileWrap) mobileWrap.style.display = "none";
-    }
-  }
-  window.addEventListener("DOMContentLoaded", showCorrectVideo);
-  window.addEventListener("resize", showCorrectVideo);
-
-
   // Get all elements safely
   const dropdown = document.getElementById("dropdown");
   const dropdownContent = document.getElementById("dropdownContent");
@@ -314,6 +296,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setupVolumeToggles('.crivals-grid-video-wrapper', 'crivals-volume-btn', 'crivals-volume-icon');
-  setupVolumeToggles('.indiaclan-grid-gallery .indiaclan-video-wrapper', 'volume-btn', 'volume-icon');
+  setupVolumeToggles('.indiaclan-grid-gallery .indiaclan-video-wrapper', 'volume-btn', 'volume-icon');4
+
+  
+  // check for mobile view
+  function showCorrectVideo() {
+    // You can adjust the breakpoint (e.g., 768) as you wish
+    var isMobile = window.matchMedia("(max-width: 767px)").matches;
+    var desktopWrap = document.getElementById("desktopVideoWrapper");
+    var mobileWrap = document.getElementById("mobileVideoWrapper");
+    if (isMobile) {
+      if (desktopWrap) desktopWrap.style.display = "none";
+      if (mobileWrap) mobileWrap.style.display = "";
+    } else {
+      if (desktopWrap) desktopWrap.style.display = "";
+      if (mobileWrap) mobileWrap.style.display = "none";
+    }
+  }
+  window.addEventListener("DOMContentLoaded", showCorrectVideo);
+  window.addEventListener("resize", showCorrectVideo);
 
 })
