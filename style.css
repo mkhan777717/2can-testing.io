@@ -2136,7 +2136,7 @@ hr {
         padding-top: 2em;
         padding-right: 1em;
         padding-bottom: 2em;
-        height: 35vh !important;
+        height: 20rem !important;
     }
 
     .card2 {
@@ -2303,7 +2303,6 @@ hr {
     }
 
     .card {
-        height: 50vh !important;
         min-height: 20em !important;
     }
 
