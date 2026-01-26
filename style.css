@@ -2307,6 +2307,10 @@ hr {
         min-height: 20em !important;
     }
 
+    .card2{
+        min-height: 90vh !important;
+    }
+
     .workCardNumberText{
         font-size: 12px;
     }
