@@ -513,6 +513,7 @@ hr {
     border-radius: 1em;
     position: relative;
     background-size: cover;
+    background-position: center;
 }
 
 .tab1 {
