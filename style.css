@@ -28,6 +28,8 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky !important;
+    top: 0;
 }
 
 .rightItemsNav {
@@ -2172,7 +2174,7 @@ hr {
     }
 
     .subTitle {
-        font-size: 1em;
+        font-size: 1.4em;
     }
 
     .contactBtn{
@@ -2331,6 +2333,10 @@ hr {
 
     .contacNowBottomWrapper{
 
+    }
+
+    .subTitle {
+        font-size: 1em;
     }
     
 }

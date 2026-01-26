@@ -1,4 +1,18 @@
+
+import { initHeader } from './components/header.js';
+import { initFooter } from './components/footer.js';
+
 document.addEventListener("DOMContentLoaded", () => {
+
+  const app = document.getElementById('app');
+
+  // Add header to the top
+  app.prepend(initHeader());
+
+  // Add footer to the bottom
+  app.append(initFooter());
+
+
   // Get all elements safely
   const dropdown = document.getElementById("dropdown");
   const dropdownContent = document.getElementById("dropdownContent");
