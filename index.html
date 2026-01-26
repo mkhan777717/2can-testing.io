@@ -120,14 +120,18 @@
         }
     </style>
 </head>
-
 <body>
-
-
     <div id="app">
-        <div class="videoWrapper maxWidth1240">
-            <video autoplay loop muted playsinline class="videoStyle">
+        <div class="videoWrapper maxWidth1240" id="desktopVideoWrapper" style="display:none;">
+            <video autoplay loop muted playsinline class="videoStyle" id="desktopVideo">
                 <source src="./assets/web-video.webm" type="video/webm" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="videoWrapper" id="mobileVideoWrapper" style="display:none;">
+            <video autoplay loop muted playsinline class="videoStyle" id="mobileVideo">
+                <source src="./assets/mobile-video.webm" type="video/webm" />
                 Your browser does not support the video tag.
             </video>
         </div>

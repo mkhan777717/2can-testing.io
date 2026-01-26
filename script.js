@@ -5,12 +5,28 @@ import { initFooter } from './components/footer.js';
 document.addEventListener("DOMContentLoaded", () => {
 
   const app = document.getElementById('app');
-
   // Add header to the top
   app.prepend(initHeader());
-
   // Add footer to the bottom
   app.append(initFooter());
+
+
+  // check for mobile view
+  function showCorrectVideo() {
+    // You can adjust the breakpoint (e.g., 768) as you wish
+    var isMobile = window.matchMedia("(max-width: 767px)").matches;
+    var desktopWrap = document.getElementById("desktopVideoWrapper");
+    var mobileWrap = document.getElementById("mobileVideoWrapper");
+    if (isMobile) {
+      if (desktopWrap) desktopWrap.style.display = "none";
+      if (mobileWrap) mobileWrap.style.display = "";
+    } else {
+      if (desktopWrap) desktopWrap.style.display = "";
+      if (mobileWrap) mobileWrap.style.display = "none";
+    }
+  }
+  window.addEventListener("DOMContentLoaded", showCorrectVideo);
+  window.addEventListener("resize", showCorrectVideo);
 
 
   // Get all elements safely

@@ -2114,9 +2114,6 @@ hr {
  .dropdown-content{
         width: 85vw;
     }
-    .videoStyle{
-        height: 10em;
-    }
     .videoWrapper{
         height: auto;
     }
@@ -2294,9 +2291,6 @@ hr {
         padding-top: 0;
     }
 
-    .videoStyle{
-        height: 20rem !important;
-    }
 
     .marquee-content{
         font-size: 1rem;
@@ -2342,9 +2336,7 @@ hr {
 }
 
 @media (max-width: 385px) {
-    .videoStyle{
-        height: 16rem !important;
-    }
+
     .card{
         height: 23rem !important;
         min-height: 20em !important;
