@@ -172,16 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Move a div as the first child of #content (not whole page parent)
-    function moveDivToTopInContent(divElement) {
-      const contentDiv = document.getElementById("content");
-      if (divElement && contentDiv && divElement.parentNode === contentDiv) {
-        if (contentDiv.firstChild !== divElement) {
-          contentDiv.insertBefore(divElement, contentDiv.firstChild);
-        }
-      }
-    }
-
     function toggleDivs() {
       const selectedValues = Array.from(
         dropdownContent.querySelectorAll("input:checked")
@@ -193,16 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const show = selectedValues.every((val) => filtersForDiv.includes(val));
         div.style.display = show ? "block" : "none";
       });
-
-      // If fableStreet filter is active (for moving div5 to top)
-      params = new URLSearchParams(window.location.search);
-      filter = params.get("filter");
-      if (filter === "fableStreet") {
-        const div5 = divs["div5"];
-        if (div5 && div5.style.display !== "none" && div5.parentNode && div5.parentNode.id === "content") {
-          moveDivToTopInContent(div5);
-        }
-      }
     }
 
     // --- CLICK EVENTS ---
@@ -258,11 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Display only the relevant div
         if (divs[divKey]) {
           divs[divKey].style.display = "block";
-        }
-
-        // Special handling for fableStreet
-        if (filter === "fableStreet" && divs["div5"] && divs["div5"].parentNode && divs["div5"].parentNode.id === "content") {
-          moveDivToTopInContent(divs["div5"]);
         }
       }
       // else -- all divs are hidden if filter is invalid
