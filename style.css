@@ -297,7 +297,7 @@ a:hover {
 }
 
 .contacNowBottomWrapper {
-    /* padding: 3em; */
+    padding: 4em 0;
     position: relative;
     margin: 5em;
 }
@@ -2313,7 +2313,7 @@ hr {
     }
 
     .card2{
-        min-height: 35rem !important;
+        min-height: 35em !important;
     }
 
     .workCardNumberText{
@@ -2322,6 +2322,15 @@ hr {
 
     .divPadFilter{
         padding: 2rem 0;
+    }
+
+    .contactBtnYellow{
+        padding: 1rem !important;
+        font-size: 0.8em !important;
+    }
+
+    .contacNowBottomWrapper{
+
     }
     
 }
@@ -2339,6 +2348,9 @@ hr {
     }
     .divPadFilter{
         padding: 0 1rem;
+    }
+    .card2{
+        min-height: 36em !important;
     }
 }
 
